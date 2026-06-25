@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محطة سمارت | Smart Station</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap');
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-bg {
+            background: radial-gradient(circle at top right, #1e293b 0%, #0f172a 100%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.3);
+        }
+
+        .blob {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            filter: blur(80px);
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.2;
+            animation: move 20s infinite alternate;
+        }
+
+        @keyframes move {
+            from { transform: translate(0, 0); }
+            to { transform: translate(100px, 100px); }
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <div class="blob" style="top: 10%; left: 10%;"></div>
+    <div class="blob" style="bottom: 10%; right: 10%;"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="text-2xl font-black gradient-text">محطة سمارت</div>
+            <div class="hidden md:flex space-x-8 space-x-reverse">
+                <a href="#home" class="hover:text-sky-400 transition">الرئيسية</a>
+                <a href="#about" class="hover:text-sky-400 transition">من نحن</a>
+                <a href="#services" class="hover:text-sky-400 transition">الخدمات</a>
+                <a href="#locations" class="hover:text-sky-400 transition">مواقعنا</a>
+                <a href="#register" class="bg-sky-500 hover:bg-sky-600 px-6 py-2 rounded-full font-bold transition">انضم إلينا</a>
+            </div>
+            <div class="md:hidden text-2xl"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-left">
+                <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                    نصمم <span class="gradient-text">مستقبل</span> الطاقة والخدمات في الأردن
+                </h1>
+                <p class="text-xl text-slate-400 mb-8 leading-relaxed">
+                    محطة سمارت هي بوابتك نحو عالم من الابتكار، نقدم حلولاً ذكية ومستدامة تلبي تطلعات الأجيال القادمة.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#register" class="bg-sky-500 hover:bg-sky-600 px-8 py-4 rounded-xl font-bold text-lg transition shadow-lg shadow-sky-500/20">ابدأ الآن</a>
+                    <a href="#services" class="border border-slate-700 hover:bg-slate-800 px-8 py-4 rounded-xl font-bold text-lg transition">استكشف الخدمات</a>
+                </div>
+            </div>
+            <div class="relative" data-aos="zoom-in">
+                <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&q=80&w=800" alt="Smart Station" class="rounded-3xl shadow-2xl">
+                <div class="absolute -bottom-6 -right-6 glass p-6 rounded-2xl shadow-xl">
+                    <div class="text-sky-400 text-3xl font-bold">100+</div>
+                    <div class="text-sm">محطة ذكية</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section id="about" class="py-20 bg-slate-900/50">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass p-10 rounded-3xl" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-sky-500/20 rounded-2xl flex items-center justify-center mb-6 text-sky-400 text-3xl">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4">رؤيتنا</h3>
+                    <p class="text-slate-400 leading-relaxed text-lg">
+                        أن نكون القوة الدافعة للتحول الرقمي والابتكار في الأردن، ممهدين الطريق لمستقبل أذكى وأكثر استدامة عبر تكامل التكنولوجيا والخدمات.
+                    </p>
+                </div>
+                <div class="glass p-10 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mb-6 text-indigo-400 text-3xl">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4">رسالتنا</h3>
+                    <p class="text-slate-400 leading-relaxed text-lg">
+                        توفير حلول تقنية متكاملة وخدمات لوجستية ذكية تدعم نمو الأعمال وتعزز جودة الحياة للمجتمع الأردني من خلال التميز والابتكار المستمر.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-6 text-center mb-16">
+            <h2 class="text-4xl font-black mb-4" data-aos="fade-down">خدماتنا المتميزة</h2>
+            <div class="h-1 w-20 bg-sky-500 mx-auto rounded-full"></div>
+        </div>
+        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+            <div class="glass p-8 rounded-3xl card-hover text-center" data-aos="fade-up">
+                <i class="fas fa-charging-station text-5xl text-sky-400 mb-6"></i>
+                <h4 class="text-2xl font-bold mb-4">شحن المركبات الكهربائية</h4>
+                <p class="text-slate-400">أسرع شبكة شحن في المملكة مع دعم فني على مدار الساعة.</p>
+            </div>
+            <div class="glass p-8 rounded-3xl card-hover text-center" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-tools text-5xl text-sky-400 mb-6"></i>
+                <h4 class="text-2xl font-bold mb-4">الصيانة الذكية</h4>
+                <p class="text-slate-400">خدمات صيانة تعتمد على الذكاء الاصطناعي لتشخيص الأعطال بدقة.</p>
+            </div>
+            <div class="glass p-8 rounded-3xl card-hover text-center" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-wallet text-5xl text-sky-400 mb-6"></i>
+                <h4 class="text-2xl font-bold mb-4">الدفع الإلكتروني</h4>
+                <p class="text-slate-400">محفظة رقمية متكاملة لتسهيل عمليات الدفع في جميع محطاتنا.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools -->
+    <section class="py-20 bg-slate-900/50">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-left">
+                <h2 class="text-4xl font-black mb-6">أدواتنا التكنولوجية</h2>
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="text-sky-400 text-2xl mt-1"><i class="fas fa-mobile-alt"></i></div>
+                        <div>
+                            <h5 class="text-xl font-bold mb-1">تطبيق الهاتف المحمول</h5>
+                            <p class="text-slate-400">تحكم كامل وحجز مسبق عبر هاتفك الذكي.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="text-sky-400 text-2xl mt-1"><i class="fas fa-map-marked-alt"></i></div>
+                        <div>
+                            <h5 class="text-xl font-bold mb-1">نظام تتبع ذكي</h5>
+                            <p class="text-slate-400">مراقبة حالة مركبتك ومستوى الشحن لحظة بلحظة.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="text-sky-400 text-2xl mt-1"><i class="fas fa-chart-line"></i></div>
+                        <div>
+                            <h5 class="text-xl font-bold mb-1">لوحة تحكم المستخدم</h5>
+                            <p class="text-slate-400">تقارير مفصلة عن استهلاكك وتوفيرك للطاقة.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="Tech Dashboard" class="rounded-3xl shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations -->
+    <section id="locations" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black mb-4" data-aos="fade-down">مواقع محطاتنا</h2>
+                <p class="text-slate-400">تنتشر محطاتنا في كافة أنحاء المملكة الأردنية الهاشمية</p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="glass p-6 rounded-2xl text-center border-b-4 border-sky-500" data-aos="zoom-in">
+                    <h5 class="text-xl font-bold">عمان</h5>
+                    <p class="text-sm text-slate-400 mt-2">12 محطة رئيسية</p>
+                </div>
+                <div class="glass p-6 rounded-2xl text-center border-b-4 border-sky-500" data-aos="zoom-in" data-aos-delay="100">
+                    <h5 class="text-xl font-bold">إربد</h5>
+                    <p class="text-sm text-slate-400 mt-2">8 محطات ذكية</p>
+                </div>
+                <div class="glass p-6 rounded-2xl text-center border-b-4 border-sky-500" data-aos="zoom-in" data-aos-delay="200">
+                    <h5 class="text-xl font-bold">الزرقاء</h5>
+                    <p class="text-sm text-slate-400 mt-2">6 محطات متكاملة</p>
+                </div>
+                <div class="glass p-6 rounded-2xl text-center border-b-4 border-sky-500" data-aos="zoom-in" data-aos-delay="300">
+                    <h5 class="text-xl font-bold">العقبة</h5>
+                    <p class="text-sm text-slate-400 mt-2">5 محطات سريعة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section id="register" class="py-20 bg-gradient-to-b from-slate-900 to-sky-900">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto glass p-10 md:p-16 rounded-[3rem] shadow-2xl relative overflow-hidden" data-aos="flip-left">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-sky-500 opacity-10 rounded-full -mr-16 -mt-16"></div>
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-black mb-4">انضم لعائلة محطة سمارت</h2>
+                    <p class="text-slate-300">سجل الآن للحصول على عروض حصرية وخصومات لأول 1000 مشترك</p>
+                </div>
+                <form id="registrationForm" class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label class="block text-sm font-bold pr-2">الاسم الكامل</label>
+                        <input type="text" placeholder="أدخل اسمك" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-500 transition" required>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="block text-sm font-bold pr-2">البريد الإلكتروني</label>
+                        <input type="email" placeholder="example@mail.com" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-500 transition" required>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="block text-sm font-bold pr-2">رقم الهاتف</label>
+                        <input type="tel" placeholder="07XXXXXXXX" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-500 transition" required>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="block text-sm font-bold pr-2">المدينة</label>
+                        <select class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-500 transition">
+                            <option>عمان</option>
+                            <option>إربد</option>
+                            <option>الزرقاء</option>
+                            <option>العقبة</option>
+                            <option>أخرى</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2 mt-4">
+                        <button type="submit" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-black py-4 rounded-xl text-xl shadow-lg shadow-sky-500/20 transition transform active:scale-95">
+                            إرسال الطلب
+                        </button>
+                    </div>
+                </form>
+                <div id="successMsg" class="hidden mt-6 p-4 bg-green-500/20 border border-green-500 text-green-400 rounded-xl text-center">
+                    تم إرسال طلبك بنجاح! سنتواصل معك قريباً.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-800">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-right">
+            <div>
+                <div class="text-2xl font-black gradient-text mb-4">محطة سمارت</div>
+                <p class="text-slate-500">© 2026 جميع الحقوق محفوظة لمحطة سمارت</p>
+            </div>
+            <div class="flex gap-6 text-2xl">
+                <a href="#" class="text-slate-400 hover:text-sky-400 transition"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-slate-400 hover:text-sky-400 transition"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-slate-400 hover:text-sky-400 transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-slate-400 hover:text-sky-400 transition"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Form Submission Handling
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.classList.add('hidden');
+            document.getElementById('successMsg').classList.remove('hidden');
+        });
+
+        // Smooth Navbar Background Change
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'bg-slate-950/90');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.remove('py-2', 'bg-slate-950/90');
+                nav.classList.add('py-4');
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a11335119ab42b17',t:'MTc4MjM4MjQ4Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
